@@ -8,24 +8,27 @@ function randomInt(min, max) {
 
 var timeline = new TimelineMax();
 
-timeline.to("div:nth-child(2n)", 2, {
+// timeline.from("div", 2, {
+//   x: () => randomInt(0, window.innerWidth),
+//   y: () => randomInt(0, window.innerHeight)
+// });
+
+timeline.to("div", 2, {
   repeat: 99999,
   yoyo: true,
-  ease:  Bounce.easeOut,
-  scale: () => randomFloat(0.5, 12),
-  rotation: () => randomInt(200, 709),
-  x: () => randomInt(0, window.innerWidth),
-  y: () => randomInt(0, window.innerHeight / 2),
-  background: "red",
-  opacity: 0.8,
+  // ease: Bounce.easeOut,
+  x : window.innerWidth / 2,
+  y : window.innerHeight / 2,
+  scale: () => randomFloat(0.5, 8),
+  rotation: () => randomInt(200, 709)
 });
 
-TweenMax.to("div:nth-child(2n+1)", 1, {
-  ease: Back.easeOut.config(1.7),
-  scale: () => randomFloat(0.5, 2),
-  rotation: () => randomInt(200, 709),
-  x: () => randomInt(0, window.innerWidth),
-  y: () => randomInt(0, window.innerHeight / 2),
-  background: "green",
-  opacity: 1,
-});
+// TweenMax.to("div:nth-child(2n+1)", 1, {
+//   ease: Back.easeOut.config(1.7),
+//   scale: () => randomFloat(0.5, 2),
+//   rotation: () => randomInt(200, 709),
+//   x: () => randomInt(0, window.innerWidth),
+//   y: () => randomInt(0, window.innerHeight / 2),
+//   background: "green",
+//   opacity: 1,
+// });

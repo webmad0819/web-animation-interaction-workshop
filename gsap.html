@@ -10,28 +10,34 @@
     <style>
       div {
         height: 50px;
-        width: 50px;
-        background: green;
-        border-radius: 20%;
+        width: 20px;
+        border-radius: 80%;
+        position: absolute;
+        background: linear-gradient(red, rgb(49, 161, 199));
+        border: 1px solid black;
+        opacity: 0.8;
       }
 
       body {
         height: 100vh;
         width: 100vw;
+        
       }
     </style>
   </head>
 
   <body>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <script>
+      Array(100)
+        .fill()
+        .map(x => {
+          document.querySelector("body").appendChild(document.createElement("div"))
+        })
+    
+    </script>
 
     <script src="js/TweenMax.min.js"></script>
     <script src="js/gsap.js"></script>
   </body>
 </html>
+ 
